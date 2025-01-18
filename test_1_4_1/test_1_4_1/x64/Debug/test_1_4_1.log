@@ -1,3 +1,0 @@
-﻿  stringcat.c
-E:\code\test-1.c\test_1_4\test_1_4_1\test_1_4_1\stringcat.c(10,2): warning C4013: “gets”未定义；假设外部返回 int
-  test_1_4_1.vcxproj -> E:\code\test-1.c\test_1_4\test_1_4_1\x64\Debug\test_1_4_1.exe
