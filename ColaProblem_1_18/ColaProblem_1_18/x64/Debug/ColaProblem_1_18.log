@@ -1,0 +1,4 @@
+﻿  DiomandPrint.c
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ColaProblem_1_18\ColaProblem_1_18\DiomandPrint.c(12,3): warning C4013: “exit”未定义；假设外部返回 int
+DiomandPrint.obj : error LNK2005: main 已经在 ColaProblem.obj 中定义
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ColaProblem_1_18\x64\Debug\ColaProblem_1_18.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
