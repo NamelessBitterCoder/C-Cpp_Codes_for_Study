@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\DiomandPrint_1_18\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2005A1C3-E085-493D-BEB0-E53764CBCE4B}|DiomandPrint_1_18\\DiomandPrint_1_18.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\DiomandPrint_1_18\\DiomandPrint_1_18\\DiomandPrint.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2005A1C3-E085-493D-BEB0-E53764CBCE4B}|DiomandPrint_1_18\\DiomandPrint_1_18.vcxproj|solutionrelative:DiomandPrint_1_18\\DiomandPrint.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DiomandPrint.c",
+              "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\DiomandPrint_1_18\\DiomandPrint_1_18\\DiomandPrint.c",
+              "RelativeDocumentMoniker": "DiomandPrint_1_18\\DiomandPrint.c",
+              "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\DiomandPrint_1_18\\DiomandPrint_1_18\\DiomandPrint.c",
+              "RelativeToolTip": "DiomandPrint_1_18\\DiomandPrint.c",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-18T10:22:17.894Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
