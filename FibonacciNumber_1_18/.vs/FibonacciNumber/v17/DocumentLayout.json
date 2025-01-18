@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\FibonacciNumber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E8BCE-1EA8-47A4-AFB7-C667AD289E01}|FibonacciNumber\\FibonacciNumber.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\FibonacciNumber\\FibonacciNumber\\FibonacciNumber.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1F3E8BCE-1EA8-47A4-AFB7-C667AD289E01}|FibonacciNumber\\FibonacciNumber.vcxproj|solutionrelative:FibonacciNumber\\FibonacciNumber.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FibonacciNumber.c",
+              "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\FibonacciNumber\\FibonacciNumber\\FibonacciNumber.c",
+              "RelativeDocumentMoniker": "FibonacciNumber\\FibonacciNumber.c",
+              "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\FibonacciNumber\\FibonacciNumber\\FibonacciNumber.c",
+              "RelativeToolTip": "FibonacciNumber\\FibonacciNumber.c",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-18T13:46:29.852Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
