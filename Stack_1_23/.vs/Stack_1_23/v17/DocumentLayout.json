@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0204D273-E934-49CF-8AB5-277321DD1175}|Stack_1_23\\Stack_1_23.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0204D273-E934-49CF-8AB5-277321DD1175}|Stack_1_23\\Stack_1_23.vcxproj|solutionrelative:Stack_1_23\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0204D273-E934-49CF-8AB5-277321DD1175}|Stack_1_23\\Stack_1_23.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0204D273-E934-49CF-8AB5-277321DD1175}|Stack_1_23\\Stack_1_23.vcxproj|solutionrelative:Stack_1_23\\Stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -18,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Stack.h",
               "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\Stack.h",
               "RelativeDocumentMoniker": "Stack_1_23\\Stack.h",
               "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\Stack.h",
               "RelativeToolTip": "Stack_1_23\\Stack.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-23T13:59:01.933Z",
               "IsPinned": true,
@@ -36,15 +40,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Stack.c",
               "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\Stack.c",
               "RelativeDocumentMoniker": "Stack_1_23\\Stack.c",
               "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\Stack.c",
               "RelativeToolTip": "Stack_1_23\\Stack.c",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAADoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-23T13:59:30.955Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.c",
+              "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\test.c",
+              "RelativeDocumentMoniker": "Stack_1_23\\test.c",
+              "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Stack_1_23\\Stack_1_23\\test.c",
+              "RelativeToolTip": "Stack_1_23\\test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-23T17:01:24.526Z",
               "EditorCaption": ""
             }
           ]
