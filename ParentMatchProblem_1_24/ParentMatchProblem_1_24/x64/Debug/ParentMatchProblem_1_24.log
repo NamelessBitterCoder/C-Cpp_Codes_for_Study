@@ -1,0 +1,19 @@
+﻿  ParentMatchProblem.c
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(10,11): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(10,25): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(10,39): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(23,12): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(23,26): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(23,40): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(23,54): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(24,12): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(24,26): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(24,40): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(24,54): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(25,12): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(25,26): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(25,40): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(25,54): warning C4047: “==”:“int”与“char [2]”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(55,16): warning C4047: “函数”:“char *”与“char **”的间接级别不同
+E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\ParentMatchProblem_1_24\ParentMatchProblem.c(55,16): warning C4024: “isMatched”: 形参和实参 1 的类型不同
+  ParentMatchProblem_1_24.vcxproj -> E:\CodeForStudy\C-Cpp_Codes_for_Study\ParentMatchProblem_1_24\x64\Debug\ParentMatchProblem_1_24.exe
