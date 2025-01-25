@@ -3,11 +3,12 @@
 
 bool isMatched(char* pc)
 {
+	assert(*pc);
 	Stack stk;
 	StackInit(&stk);
 	while (*pc)
 	{
-		if (*pc == "(" || *pc == "[" || *pc == "{")
+		if (*pc == '(' || *pc == '[' || *pc == '{')
 		{
 			StackPush(&stk, *pc);
 		}
@@ -20,9 +21,9 @@ bool isMatched(char* pc)
 			}
 			char top=StackTop(&stk);
 			StackPop(&stk);
-			if (top == "(" && *pc == "]" || top == "(" && *pc == "}"
-				|| top == "[" && *pc == ")" || top == "[" && *pc == "}"
-				|| top == "{" && *pc == "]" || top == "{" && *pc == ")")
+			if (top == '(' && *pc == ']' || top == '(' && *pc == '}'
+				|| top == '[' && *pc == ')' || top == '[' && *pc == '}'
+				|| top == '{' && *pc == ']' || top == '{' && *pc == ')')
 			{
 				StackDestory(&stk);
 				return false;
@@ -43,16 +44,17 @@ bool isMatched(char* pc)
 }
 int main()
 {
-	char* parents = "(()){}[]";
+	char* parents = "(())[]{}";
+	char* print = parents;
 	printf("需要匹配的字符串：\n");
-	while (*parents)
+	while (*print)
 	{
-		printf("%c ", *parents);
-		parents++;
+		printf("%c ", *print);
+		print++;
 	}
 	printf("\n");
 	printf("输入的括号字符串的匹配结果：\n");
-	if (isMatched(&parents))
+	if (isMatched(parents))
 	{
 		printf("匹配成功！\n");
 	}

@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-24T12:59:59.762Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,7 +45,7 @@
               "RelativeDocumentMoniker": "ParentMatchProblem_1_24\\Stack.c",
               "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\ParentMatchProblem_1_24\\ParentMatchProblem_1_24\\Stack.c",
               "RelativeToolTip": "ParentMatchProblem_1_24\\Stack.c",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-24T13:00:12.193Z",
               "IsPinned": true,
@@ -60,7 +59,7 @@
               "RelativeDocumentMoniker": "ParentMatchProblem_1_24\\ParentMatchProblem.c",
               "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\ParentMatchProblem_1_24\\ParentMatchProblem_1_24\\ParentMatchProblem.c",
               "RelativeToolTip": "ParentMatchProblem_1_24\\ParentMatchProblem.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAC4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-24T13:00:31.585Z",
               "EditorCaption": ""
