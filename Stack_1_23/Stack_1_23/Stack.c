@@ -16,7 +16,7 @@ void StackInit(Stack* Stk)
 }
 
 //2.删除栈；
-void StackDelete(Stack* Stk)
+void StackDestory(Stack* Stk)
 {
 	assert(Stk);
 	assert(Stk->stk);
@@ -33,7 +33,7 @@ bool StackEmpty(Stack Stk)
 }
 
 //4.返回栈的长度；
-int StackLength(Stack Stk)
+int StackSize(Stack Stk)
 {
 	return Stk.top;
 }

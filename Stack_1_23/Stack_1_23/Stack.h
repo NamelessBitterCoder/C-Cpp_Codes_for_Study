@@ -16,11 +16,11 @@ typedef struct Stack
 //1.初始化栈；
 void StackInit(Stack* Stk);
 //2.删除栈；
-void StackDelete(Stack* Stk);
+void StackDestory(Stack* Stk);
 //3.检验栈是否为空
 bool StackEmpty(Stack Stk);
 //4.返回栈的长度；
-int StackLength(Stack Stk);
+int StackSize(Stack Stk);
 //5.弹出栈顶元素；
 void StackPop(Stack* Stk);
 //6.向栈顶插入元素；

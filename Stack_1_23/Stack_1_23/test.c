@@ -10,14 +10,14 @@ int main()
 	StackPush(&stk, 2);
 	StackPush(&stk, 1);
 	StackPush(&stk, 0);
-	printf("压入元素后栈的长度：%d\n", StackLength(stk));
+	printf("压入元素后栈的长度：%d\n", StackSize(stk));
 	printf("栈内元素：\n");
 	while (!StackEmpty(stk))
 	{
 		printf("%d\n", StackTop(&stk));
 		StackPop(&stk);
 	}
-	printf("弹出元素后栈的长度：%d\n", StackLength(stk));
-	StackDelete(&stk);
+	printf("弹出元素后栈的长度：%d\n", StackSize(stk));
+	StackDestory(&stk);
 	return 0;
 }
