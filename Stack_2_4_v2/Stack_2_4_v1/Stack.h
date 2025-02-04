@@ -24,6 +24,6 @@ STDataType StackTop(Stack* ps);
 //5.获取栈中元素的个数；
 int StackSize(Stack* ps);
 //6.检测栈是否为空，如果为空返回非零结果，如果不为空返回0；
-int StackEmpty(Stack* ps);
+bool StackEmpty(Stack* ps);
 //7.销毁栈；
 void StackDestroy(Stack* ps);
