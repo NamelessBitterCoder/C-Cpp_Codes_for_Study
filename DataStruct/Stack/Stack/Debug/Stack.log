@@ -1,0 +1,4 @@
+﻿  Stack.c
+E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\Stack\Stack\Stack.c(19,34): warning C4013: “realloc”未定义；假设外部返回 int
+E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\Stack\Stack\Stack.c(67,2): warning C4013: “free”未定义；假设外部返回 int
+  Stack.vcxproj -> E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\Stack\Debug\Stack.exe
