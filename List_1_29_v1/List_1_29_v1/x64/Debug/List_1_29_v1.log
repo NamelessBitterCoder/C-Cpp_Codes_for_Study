@@ -1,5 +1,0 @@
-﻿  List.c
-  test.c
-  正在生成代码...
-E:\CodeForStudy\C-Cpp_Codes_for_Study\List_1_29_v1\List_1_29_v1\List.c(59,1): warning C4715: “CreateNode”: 不是所有的控件路径都返回值
-  List_1_29_v1.vcxproj -> E:\CodeForStudy\C-Cpp_Codes_for_Study\List_1_29_v1\x64\Debug\List_1_29_v1.exe
