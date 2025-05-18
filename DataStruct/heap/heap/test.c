@@ -10,6 +10,12 @@ void test1()
 	{
 		HeapPush(&hp, a[i]);
 	}
+
+	while (!HeapEmpty(&hp))
+	{
+		printf("%d ", HeapTop(&hp));
+		HeapPop(&hp);
+	}
 	HeapDestroy(&hp);
 }
 

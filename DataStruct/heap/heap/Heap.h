@@ -22,5 +22,5 @@ void HeapInit(HP* php);
 void HeapDestroy(HP* php);
 void HeapPush(HP* php, HPDataType val);
 void HeapPop(HP* php);
-HPDataType HPTop(HP* php);
-bool HPEmpty(HP* php);
+HPDataType HeapTop(HP* php);
+bool HeapEmpty(HP* php);

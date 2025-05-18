@@ -25,7 +25,29 @@ void AdjustUp(HPDataType* a, int child)
 		}
 	}
 }
-void AdjustDown(HPDataType* a, int n, int parent);
+void AdjustDown(HPDataType* a, int n, int parent)
+{
+	assert(a);
+	int child = parent * 2 + 1;
+	while (child < n)
+	{
+		//找出较小的的那个孩子；
+		if (child + 1 < n && a[child] > a[child + 1])
+		{
+			child++;
+		}
+		if (a[child] < a[parent])
+		{
+			Swap(&a[child], &a[parent]);
+			parent = child;
+			child = parent * 2 + 1;
+		}
+		else
+		{
+			break;
+		}
+	}
+}
 
 void HeapInit(HP* php)
 {
@@ -61,9 +83,25 @@ void HeapPush(HP* php, HPDataType val)
 	AdjustUp(php->a, php->size - 1);
 }
 
-HPDataType HPTop(HP* php)
+void HeapPop(HP* php)
+{
+	assert(php);
+	assert(php->size > 0);
+	Swap(&php->a[0], &php->a[php->size - 1]);
+	php->size--;
+	AdjustDown(php->a, php->size - 1, 0);
+}
+HPDataType HeapTop(HP* php)
+{
+	assert(php);
+	assert(php->size > 0);
+
+	return php->a[0];
+}
+
+bool HeapEmpty(HP* php)
 {
 	assert(php);
 
-	return php->a[0];
+	return php->size == 0;
 }
