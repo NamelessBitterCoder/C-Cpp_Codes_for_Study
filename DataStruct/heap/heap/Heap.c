@@ -13,7 +13,7 @@ void AdjustUp(HPDataType* a, int child)
 	int parent = (child - 1) / 2;
 	while (child > 0)
 	{
-		if (a[child] < a[parent])
+		if (a[child] > a[parent])
 		{
 			Swap(&a[child], &a[parent]);
 			child = parent;
@@ -32,11 +32,11 @@ void AdjustDown(HPDataType* a, int n, int parent)
 	while (child < n)
 	{
 		//找出较小的的那个孩子；
-		if (child + 1 < n && a[child] > a[child + 1])
+		if (child + 1 < n && a[child] < a[child + 1])
 		{
 			child++;
 		}
-		if (a[child] < a[parent])
+		if (a[child] > a[parent])
 		{
 			Swap(&a[child], &a[parent]);
 			parent = child;

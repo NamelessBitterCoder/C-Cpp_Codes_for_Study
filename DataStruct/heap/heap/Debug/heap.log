@@ -1,4 +1,6 @@
 ﻿  Heap.c
+  test.c
+  正在生成代码...
 E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\heap\heap\Heap.c(77,10): warning C4047: “=”:“HPDataType *”与“HPDataType”的间接级别不同
 E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\heap\heap\Heap.c(76,14): warning C4047: “初始化”:“HPDataType”与“HPDataType *”的间接级别不同
   heap.vcxproj -> E:\CodeForStudy\C-Cpp_Codes_for_Study\DataStruct\heap\Debug\heap.exe
