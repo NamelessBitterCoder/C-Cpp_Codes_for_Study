@@ -34,7 +34,7 @@ class Point
 		protected:
 			double x;  //x轴分量；
 			double y;  //y轴分量；	 
-}; 
+}  //错误 5 ：在类的定义结束时没有加分号； 
 
 int main()
 {
@@ -49,8 +49,8 @@ int main()
 	p.y += 6;  //错误 4：y是类中受保护的变量，不能在类以外使用；
 	cout << "angle = " << p.angle()
 		 << ", radius = " << p.radius()
-		 << ", x offset = " << p.xOffset()
-		 << ", y offset = " << p.yOffset() << endl; 
+		 << ", x offset = " << p.xOffset()   ////错误 6：在endl前面加 " 实在是莫名其妙 
+		 << ", y offset = " << p.yOffset() << "endl;  
 	return 0;
 } 
  
