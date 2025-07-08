@@ -1,40 +1,37 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
-const int N = 10;
-
 int n;
+bool st[10];
+int way[10];
 
-void dfs(int u, int nums[], bool st[])
+void dfs(int u)
 {
-    if (u > n)
+    if(u > n)
     {
-        for (int i = 1; i <= n; i ++ ) printf("%d ", nums[i]);
-        puts("");
+        for(int i = 1; i <= n; i++)
+        {
+            cout << way[i] << " ";
+        }
+        cout << endl;
     }
-    else
+    for(int i = 1; i <= n; i++)
     {
-        for (int i = 1; i <= n; i ++ )
-            if (!st[i])
-            {
-                st[i] = true;
-                nums[u] = i;
-                dfs(u + 1, nums, st);
-                st[i] = false;  // »Ö¸´ÏÖ³¡
-            }
+        if(!st[i])
+        {
+            way[u] = i;
+            st[i] = true;
+            dfs(u + 1);
+            st[i] = false;
+            way[u] = 0;
+        }
+        
     }
 }
-
 int main()
 {
-    scanf("%d", &n);
-
-    int nums[N];
-    bool st[N] = {0};
-
-    dfs(1, nums, st);
-
+    cin >> n;
+    dfs(1);
     return 0;
 }
-
