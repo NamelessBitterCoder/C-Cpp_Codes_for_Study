@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\DaffodilNumber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5B14D8-9BA4-41DD-8A21-6BEAFB906A1E}|DaffodilNumber\\DaffodilNumber.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\DaffodilNumber\\DaffodilNumber\\NarcissisticNumber.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E5B14D8-9BA4-41DD-8A21-6BEAFB906A1E}|DaffodilNumber\\DaffodilNumber.vcxproj|solutionrelative:DaffodilNumber\\NarcissisticNumber.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NarcissisticNumber.c",
+              "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\DaffodilNumber\\DaffodilNumber\\NarcissisticNumber.c",
+              "RelativeDocumentMoniker": "DaffodilNumber\\NarcissisticNumber.c",
+              "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\DaffodilNumber\\DaffodilNumber\\NarcissisticNumber.c",
+              "RelativeToolTip": "DaffodilNumber\\NarcissisticNumber.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-07-15T14:37:35.46Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
