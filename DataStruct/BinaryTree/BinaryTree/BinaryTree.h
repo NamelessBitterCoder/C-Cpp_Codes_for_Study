@@ -9,4 +9,8 @@ typedef struct BinaryTreeNode
 	struct BinaryTreeNode* right;
 }BTNode;
 
+//1.创建节点；
 BTNode* BuyNode(int x);
+
+//2.创建二叉树；
+BTNode* CreateBinaryTree();
