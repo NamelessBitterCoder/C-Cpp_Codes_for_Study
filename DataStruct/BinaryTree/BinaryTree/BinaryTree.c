@@ -36,3 +36,45 @@ BTNode* CreateBinaryTree()
 
 	return node1;
 }
+
+//3.先序遍历；
+void PrevOrder(BTNode* root)
+{
+	if (root == NULL)
+	{
+		printf("N ");
+		return;
+	}
+
+	printf("%d ", root->data);
+	PrevOrder(root->left);
+	PrevOrder(root->right);
+}
+
+//4.中序遍历；
+void InOrder(BTNode* root)
+{
+	if (root == NULL)
+	{
+		printf("N ");
+		return;
+	}
+
+	InOrder(root->left);
+	printf("%d ", root->data);
+	InOrder(root->right);
+}
+
+//5.后序遍历；
+void PostOrder(BTNode* root)
+{
+	if (root == NULL)
+	{
+		printf("N ");
+		return;
+	}
+
+	PostOredr(root->left);
+	PostOrder(root->right);
+	printf("%d ", root->data);
+}
