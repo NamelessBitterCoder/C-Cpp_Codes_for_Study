@@ -78,3 +78,47 @@ void PostOrder(BTNode* root)
 	PostOrder(root->right);
 	printf("%d ", root->data);
 }
+
+//6.二叉树节点的数目；
+int TreeSize(BTNode* root)
+{
+	return root == NULL ? 0 : TreeLeafSize(root->left) + TreeLeafSize(root->right) + 1;
+}
+
+//7.二叉树叶子节点的数目；
+int TreeLeafSize(BTNode* root)
+{
+	if (root == NULL)
+		return 0;
+
+	if (root->left == NULL && root->right == NULL)
+		return 1;
+
+	return TreeLeafSize(root->left) + TreeLeafSize(root->right);
+}
+
+//8.二叉树的高度；
+int TreeHeight(BTNode* root)
+{
+	//先考虑为空的情况；
+	if (root == NULL)
+		return 0;
+
+	//二叉树的高度相当于左子树和右子树的高度的较大值 + 1；
+	int leftHeight = TreeHeight(root->left);
+	int rightHeight = TreeHeight(root->right);
+
+	return leftHeight > rightHeight ? leftHeight + 1 : rightHeight + 1;
+}
+
+//有效率问题；
+/*
+int TreeHeight(BTNode* root)
+{
+	if (root == NULL)
+		return 0;
+
+	return TreeHeight(root->left) > TreeHeight(root->right) ?
+		TreeHeight(root->left) + 1 : TreeHeight(root->right) + 1;
+}
+*/

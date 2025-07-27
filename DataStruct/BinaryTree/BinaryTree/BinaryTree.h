@@ -23,3 +23,12 @@ void InOrder(BTNode* root);
 
 //5.后序遍历；
 void PostOrder(BTNode* root);
+
+//6.二叉树节点的数目；
+int TreeSize(BTNode* root);
+
+//7.二叉树叶子节点的数目；
+int TreeLeafSize(BTNode* root);
+
+//8.二叉树的高度；
+int TreeHeight(BTNode* root);
