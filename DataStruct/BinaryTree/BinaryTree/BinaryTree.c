@@ -14,6 +14,8 @@ BTNode* BuyNode(int x)
 	node->data = x;
 	node->left = NULL;
 	node->right = NULL;
+
+	return node;
 }
 
 //2.´´½¨¶ş²æÊ÷£»
@@ -74,7 +76,7 @@ void PostOrder(BTNode* root)
 		return;
 	}
 
-	PostOredr(root->left);
+	PostOrder(root->left);
 	PostOrder(root->right);
 	printf("%d ", root->data);
 }
