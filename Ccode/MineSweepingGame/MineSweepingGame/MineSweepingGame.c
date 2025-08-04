@@ -16,6 +16,12 @@ void PrintBoard(char a[ROW][COL])
 {
 	for (int i = 1; i < ROW - 1; i++)
 	{
+		printf("%d ", i);
+	}
+	printf("\n");
+
+	for (int i = 1; i < ROW - 1; i++)
+	{
 		for (int j = 1; j < COL - 1; j++)
 		{
 			printf("%c ", a[i][j]);
@@ -32,18 +38,12 @@ void SetMine(char a[ROW][COL])
 	{
 		//生成雷的下标范围为1 - 9；
 		int x = rand() % (ROW - 2) + 1;
-		int y = rans() % (COL - 2) + 1;
-		for (int i = 1; i < ROW - 1; i++)
+		int y = rand() % (COL - 2) + 1;
+		//只有成功设置雷以后，才将count减小；
+		if (a[x][y] == '0')
 		{
-			for (int j = 1; j < COL - 1; j++)
-			{
-				//只有成功设置雷以后，才将count减小；
-				if (a[i][j] == '0')
-				{
-					a[i][j] = '1';
-					count--;
-				}
-			}
+			a[x][y] = '1';
+			count--;
 		}
 	}
 }
@@ -62,14 +62,27 @@ void FindMine(char mine[ROW][COL],char show[ROW][COL])
 		{
 			if (mine[x][y] == '1')
 			{
-				printf("这个地方是一颗雷。\n");
+				printf("这个地方是一颗雷, 游戏结束！\n");
 				break;
 			}
 			else
 			{
-				show[x][y] = GetMine(mine, x, y);
+				show[x][y] = GetMine(mine, x, y) + '0';
+				PrintBoard(show);
+				win++;
+				continue;
 			}
 		}
+		else
+		{
+			printf("输入的是非法坐标，请重新输入！\n");
+			continue;
+		}
+	}
+	if (win == (ROW - 2) * (COL - 2) - EASY_COUNT)
+	{
+		printf("恭喜你，排雷成功！\n");
+		PrintBoard(show);
 	}
 }
 
@@ -78,4 +91,29 @@ int GetMine(char a[ROW][COL], int x, int y)
 	return a[x - 1][y - 1] + a[x - 1][y] + a[x - 1][y + 1]
 		+ a[x][y - 1] + a[x][y + 1]
 		+ a[x + 1][y - 1] + a[x + 1][y] + a[x + 1][y + 1] - 8 * '0';
+}
+
+//5.游戏逻辑函数；
+void game()
+{
+	char mine[ROW][COL];
+	char show[ROW][COL];
+
+	InitBoard(mine, ROW, COL, '0');
+	InitBoard(show, ROW, COL, '*');
+
+	PrintBoard(show);
+
+	SetMine(mine);
+
+	FindMine(mine, show);
+}
+
+//6.游戏菜单；
+void menu()
+{
+	printf("*************************\n");
+	printf("******** 1. play ********\n");
+	printf("******** 0. exit ********\n");
+	printf("*************************\n");
 }

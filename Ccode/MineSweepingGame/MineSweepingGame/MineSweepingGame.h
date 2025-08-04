@@ -17,5 +17,11 @@ void PrintBoard(char a[ROW][COL]);
 void SetMine(char a[ROW][COL]);
 
 //4.查找雷的函数；
-void FindMine(char a[ROW][COL], int x, int y);
+void FindMine(char a[ROW][COL], char show[ROW][COL]);
 int GetMine(char a[ROW][COL], int x, int y);
+
+//5.游戏逻辑函数；
+void game();
+
+//6.游戏菜单；
+void menu();
