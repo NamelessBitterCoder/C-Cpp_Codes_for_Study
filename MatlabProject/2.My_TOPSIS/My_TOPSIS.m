@@ -10,9 +10,10 @@ Judge = input(['这' num2str(m) '个评价指标是否需要正向化处理，�
 if Judge == 1
     Position = input('请输入需要进行正向化处理的列，例如第2、3、4列需要处理，请你输入[2, 3, 4]：');
     disp('请输入需要正向化处理的列的指标类型（1.极小型，2.中间型， 3.区间型）');
-    tyep = input('例如：第2列是极小型，第3列是区间型，第6列是中间型，就输入[1,3,2]：');
+    type = input('例如：第2列是极小型，第3列是区间型，第6列是中间型，就输入[1,3,2]：');
     %这里需要分别对列进行处理，所以需要用列数循环；
     for i = 1 : size(Position, 2)
         X(:, Position(i)) = My_Positivization(X(:, Position(i)), type(i), Position(i));
-    end
+    end,
+    disp(X);
 end

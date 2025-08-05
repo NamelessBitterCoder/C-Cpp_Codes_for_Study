@@ -5,7 +5,7 @@
 % Matlab的函数定义要单独放在一个.m文件里，不能和主函数写在同一个文件
 
 % 对指标进行正向化的函数；
-function [posit_x] = Positivization(x, type, i)
+function [posit_x] = My_Positivization(x, type, i)
 % 输入的变量有三个：
 % x：需要正向化处理的指标对应的原始列向量
 % type: 指标的类型（1.极小型， 2.中间型， 3.区间型）
@@ -19,5 +19,21 @@ function [posit_x] = Positivization(x, type, i)
         disp('------------------- 分界线 -------------------');
     elseif type == 2
         %中间型
+        disp(['第' num2str(i) '列是中间型指标，正在进行正向化。']);
+        best = input('请输入最佳的那一个值：');
+        posit_x = My_Mid2Max(x, best);
+        disp(['第' num2str(i) '列中间型指正向化处理完成。']);
+        disp('------------------- 分界线 -------------------');
+    elseif type == 3
+        %区间型
+        disp(['第' num2str(i) '列是区间型指标，正在进行正向化。']);
+        a = input('请输入区间的下界：');
+        b = input('请输入区间的上界：');
+        posit_x = My_Inter2Max(x, a, b);
+        disp(['第' num2str(i) '列区间型指正向化处理完成。']);
+        disp('------------------- 分界线 -------------------');
+    else
+        %非法输入
+        disp('没有这种类型的指标，请检查type向量中是否有除了1、2、3之外的值！');
     end
 end
