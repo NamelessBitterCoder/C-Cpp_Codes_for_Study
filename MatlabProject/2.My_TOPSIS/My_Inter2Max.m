@@ -4,10 +4,10 @@ function [posit_x] = My_Inter2Max(x, a, b)
     M = max([a - min(x), max(x) - b]);
     posit_x = zeros(r_x, 1); % 初始化posit_x的目的是减少处理时间；
     for i = 1 : r_x
-        if x < a
-            posit_x(i) = 1 - (a - x) / M;
-        elseif x > b
-            posit_x(i) = 1 - (x - b) / M;
+        if x(i) < a
+            posit_x(i) = 1 - (a - x(i)) / M;
+        elseif x(i) > b
+            posit_x(i) = 1 - (x(i) - b) / M;
         else
             posit_x(i) = 1;
         end

@@ -14,6 +14,37 @@ if Judge == 1
     %这里需要分别对列进行处理，所以需要用列数循环；
     for i = 1 : size(Position, 2)
         X(:, Position(i)) = My_Positivization(X(:, Position(i)), type(i), Position(i));
-    end,
+    end
+    disp('正向化后的矩阵X')
     disp(X);
 end
+%% 第三步：对正向化后的矩阵进行标准化。
+Z = X ./ repmat(sum(X .* X) .^ 0.5, n, 1);
+disp('标准化矩阵 Z = ');
+disp(Z);
+
+%% 第四步：计算得分并且对得分进行归一化。
+D_P = sum((repmat(max(Z), n, 1) - Z) .^ 2, 2) .^ 0.5;  % D+ 与最大值的距离向量
+D_N = sum((repmat(min(Z), n, 1) - Z) .^ 2, 2) .^ 0.5;  % D- 与最小值的距离向量
+% 未归一化的得分
+S = D_N ./ (D_N + D_P);
+disp('归一化后的得分为stand_S = ：');
+stand_S = S / sum(S);
+disp(stand_S);
+[sorted_S,index] = sort(stand_S ,'descend');
+disp('sorted_S = ');
+disp(sorted_S);
+disp('index = ');
+disp(index);
+% A = magic(5)  % 幻方矩阵
+% M = magic(n)返回由1到n^2的整数构成并且总行数和总列数相等的n×n矩阵。阶次n必须为大于或等于3的标量。
+% sort(A)若A是向量不管是列还是行向量，默认都是对A进行升序排列。sort(A)是默认的升序，而sort(A,'descend')是降序排序。
+% sort(A)若A是矩阵，默认对A的各列进行升序排列
+% sort(A,dim)
+% dim=1时等效sort(A)
+% dim=2时表示对A中的各行元素升序排列
+% A = [2,1,3,8]
+% Matlab中给一维向量排序是使用sort函数：sort（A），排序是按升序进行的，其中A为待排序的向量；
+% 若欲保留排列前的索引，则可用 [sA,index] = sort(A,'descend') ，排序后，sA是排序好的向量，index是向量sA中对A的索引。
+% sA  =  8     3     2     1
+% index =  4     3     1     2
