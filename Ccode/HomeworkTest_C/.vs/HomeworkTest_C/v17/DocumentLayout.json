@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\HomeworkTest_C\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77CDB1B5-4A77-46D0-93F3-13E6BA87B8F2}|HomeworkTest_C\\HomeworkTest_C.vcxproj|E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\HomeworkTest_C\\HomeworkTest_C\\HomeworkTest_C.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{77CDB1B5-4A77-46D0-93F3-13E6BA87B8F2}|HomeworkTest_C\\HomeworkTest_C.vcxproj|solutionrelative:HomeworkTest_C\\HomeworkTest_C.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeworkTest_C.c",
+              "DocumentMoniker": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\HomeworkTest_C\\HomeworkTest_C\\HomeworkTest_C.c",
+              "RelativeDocumentMoniker": "HomeworkTest_C\\HomeworkTest_C.c",
+              "ToolTip": "E:\\CodeForStudy\\C-Cpp_Codes_for_Study\\Ccode\\HomeworkTest_C\\HomeworkTest_C\\HomeworkTest_C.c",
+              "RelativeToolTip": "HomeworkTest_C\\HomeworkTest_C.c",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAEYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-08-08T02:51:58.835Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
