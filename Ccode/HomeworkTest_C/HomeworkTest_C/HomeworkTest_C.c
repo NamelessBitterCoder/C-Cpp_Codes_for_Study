@@ -57,18 +57,28 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5 };
+//	short* p = (short*)arr;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		*(p + i) = 0;
+//	}
+//
+//	for (int i = 0; i < 5; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
 int main()
 {
-	int arr[] = { 1, 2, 3, 4, 5 };
-	short* p = (short*)arr;
-	for (int i = 0; i < 4; i++)
-	{
-		*(p + i) = 0;
-	}
-
-	for (int i = 0; i < 5; i++)
-	{
-		printf("%d ", arr[i]);
-	}
+	unsigned long pulArray[] = { 6, 7, 8, 9, 10 };
+	unsigned long* pulPtr;
+	pulPtr = pulArray;
+	*(pulPtr + 3) += 3;
+	printf("%d %d\n", *pulPtr, *(pulPtr + 3));
 	return 0;
 }
