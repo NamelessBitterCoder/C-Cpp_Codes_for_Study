@@ -1,12 +1,14 @@
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
-import warnings
-import matplotlib.pyplot as plt
+import subprocess
+import webbrowser
+import time
+from torch.utils.tensorboard import SummaryWriter
 import torch
 import torch.nn as nn
 import torchvision
 import numpy as np
 import torch.nn.functional as F
+
+
 
 # Step 1: 设置硬件设备，有GPU就使用GPU，没有就使用CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -14,12 +16,12 @@ print(device)
 
 # Step 2: 导入数据
 # MNIST数据在torchvision.datasets中，自带的，可以通过代码在线下载数据
-train_ds = torchvision.datasets.MNIST(root = r"E:\CodeForStudy\C-Cpp_Codes_for_Study\PythonProject2",  # 下载的文件存储的本地目录
+train_ds = torchvision.datasets.MNIST(root = r"E:\CodeForStudy\C-Cpp_Codes_for_Study\MNIST",  # 下载的文件存储的本地目录
                                       train = True,  # True为训练集， False为测试集
                                       transform = torchvision.transforms.ToTensor(),  # 将下载的数据直接转换为张量格式
                                       download = True  # True表示直接在线下载，且下载在root指定的目录中，如果已经下载了，就不会再次下载
                                       )
-test_ds = torchvision.datasets.MNIST(root= r"E:\CodeForStudy\C-Cpp_Codes_for_Study\PythonProject2",
+test_ds = torchvision.datasets.MNIST(root= r"E:\CodeForStudy\C-Cpp_Codes_for_Study\MNIST",
                                      train=False,
                                      transform=torchvision.transforms.ToTensor(),
                                      download=True
@@ -161,24 +163,35 @@ for epoch in range(epochs):
 print('Done')
 
 # 训练结果可视化
-warnings.filterwarnings('ignore')
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 显示中文标签，不设置会显示中文乱码
-plt.rcParams['axes.unicode_minus'] = False  # 显示负号
-plt.rcParams['figure.dpi'] = 100  # 分辨率
+writer = SummaryWriter(log_dir = './logs')
 
-epochs_range = range(epochs)
+# 在训练过程中记录指标
+for epoch in range(epochs):
+    # 记录训练正确率
+    writer.add_scalar('Accuracy/train', train_acc[epoch], epoch)
+    # 记录测试正确率
+    writer.add_scalar('Accuracy/test', test_acc[epoch], epoch)
+    # 记录训练损失
+    writer.add_scalar('Loss/train', train_loss[epoch], epoch)
+    # 记录测试损失
+    writer.add_scalar('Loss/test', test_loss[epoch], epoch)
 
-plt.figure(figsize = (12, 3))
+writer.close()
 
-plt.plot(epochs_range, train_acc, label = '训练正确率')
-plt.plot(epochs_range, test_acc, label = '测试正确率')
-plt.legend(loc = 'lower right')
-plt.title('训练与测试正确率')
-plt.show()
+# 启动TensorBoard并打开浏览器
+log_dir = './logs'
+# 启动TensorBoard命令
+tensorboard_cmd = f'tensorboard --logdir={log_dir} --port=6006'
+# 启动TensorBoard进程
+process = subprocess.Popen(tensorboard_cmd, shell=True)
+# 启动TensorBoard进程
+process = subprocess.Popen(tensorboard_cmd, shell =True)
 
-plt.plot(epochs_range, train_loss, label = '训练损失')
-plt.plot(epochs_range, test_loss, label = '测试损失')
-plt.legend(loc = 'upper right')
-plt.title('训练与测试损失率')
-plt.show()
+# 等待几秒，确保TensorBoard服务启动
+time.sleep(5)
 
+# 打开浏览器访问TensorBoard
+webbrowser.open('http://localhost:6006')
+
+# (可选)训练结束后，若想终止TensorBoard进程，可取消下面注释
+# process.terminate()
