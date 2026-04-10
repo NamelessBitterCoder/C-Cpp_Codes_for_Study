@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>热气球环游</title>
+    <link rel="stylesheet" href="./Cesium/Build/Cesium/Widgets/widgets.css">
+    <script src="./Cesium/Build/Cesium/Cesium.js"></script>
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #locationPanel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #locateBtn {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            padding: 10px 25px;
+            font-size: 14px;
+            cursor: pointer;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        #locateBtn:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="locationPanel">
+        <div style="font-weight: bold; margin-bottom: 8px;">热气球环游</div>
+        <label style="display: block; margin-bottom: 5px;">
+            <input type="radio" name="location" value="yulong" checked> 玉龙雪山
+        </label>
+        <label style="display: block; margin-bottom: 5px;">
+            <input type="radio" name="location" value="pinqing"> 品清湖
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="location" value="scnu"> 华师汕尾校区
+        </label>
+    </div>
+
+    <button id="locateBtn">📍 定位热气球</button>
+
+    <div id="cesiumContainer"></div>
+
+    <script>
+        Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiNmQxNDA2NS03MzBmLTRhMTktOWZlNC02NDIzYzlmNDE1NzIiLCJpZCI6NDA5ODE4LCJpYXQiOjE3NzQ1Nzg5ODZ9.k1z4e_hx7qGJgk0zcZ7lskp-DeQLVwWhANkOzB0P1k0";
+
+        const viewer = new Cesium.Viewer("cesiumContainer");
+
+        // 复刻玉龙雪山的视角逻辑，效果完全一致
+        const locations = {
+            // 玉龙雪山：完全保留原有配置，作为基准
+            yulong: {
+                balloonLon: 100.13,
+                balloonLat: 27.08,
+                balloonHeight: 3000,
+                // 相机在热气球东侧，同纬度，高度仅高100米
+                cameraLon: 100.14,
+                cameraLat: 27.08,
+                cameraHeight: 3100,
+                // 朝正西看热气球，向下5°平视
+                orientation: {
+                    heading: Cesium.Math.toRadians(270.0),
+                    pitch: Cesium.Math.toRadians(5.0),
+                    roll: 0.0
+                }
+            },
+            // 品清湖：和玉龙雪山完全一样的视角逻辑
+            pinqing: {
+                balloonLon: 115.368,
+                balloonLat: 22.773,
+                balloonHeight: 50,
+                // 相机在热气球东侧，同纬度，高度仅高100米（和玉龙雪山比例一致）
+                cameraLon: 115.373,
+                cameraLat: 22.773,
+                cameraHeight: 150,
+                // 和玉龙雪山完全一致的朝向：朝正西看热气球，向下5°平视
+                orientation: {
+                    heading: Cesium.Math.toRadians(270.0),
+                    pitch: Cesium.Math.toRadians(5.0),
+                    roll: 0.0
+                }
+            },
+            // 华师汕尾校区
+            scnu: {
+                // 热气球精准在校区体育中心正上方
+                balloonLon: 115.3108,
+                balloonLat: 22.7922,
+                balloonHeight: 80,
+                // 相机在热气球东侧，同纬度，高度仅高120米（和玉龙雪山比例一致）
+                cameraLon: 115.3158,
+                cameraLat: 22.7922,
+                cameraHeight: 200,
+                // 和玉龙雪山完全一致的朝向：朝正西看热气球，向下5°平视
+                orientation: {
+                    heading: Cesium.Math.toRadians(270.0),
+                    pitch: Cesium.Math.toRadians(5.0),
+                    roll: 0.0
+                }
+            }
+        };
+
+        const balloon = viewer.entities.add({
+            position: Cesium.Cartesian3.fromDegrees(
+                locations.yulong.balloonLon,
+                locations.yulong.balloonLat,
+                locations.yulong.balloonHeight
+            ),
+            model: {
+                uri: "./Cesium/Apps/SampleData/models/CesiumBalloon/CesiumBalloon.glb",
+                scale: 10.0,
+            },
+        });
+
+        function switchLocation(key) {
+            const loc = locations[key];
+            balloon.position = Cesium.Cartesian3.fromDegrees(loc.balloonLon, loc.balloonLat, loc.balloonHeight);
+            viewer.camera.flyTo({
+                destination: Cesium.Cartesian3.fromDegrees(loc.cameraLon, loc.cameraLat, loc.cameraHeight),
+                orientation: loc.orientation,
+                duration: 2,
+            });
+        }
+
+        // 和玉龙雪山视角逻辑完全一致
+        function locateBalloon() {
+            const balloonPos = balloon.position.getValue(viewer.clock.currentTime);
+            if (!balloonPos) return;
+
+            const cartographic = Cesium.Cartographic.fromCartesian(balloonPos);
+            const lon = Cesium.Math.toDegrees(cartographic.longitude);
+            const lat = Cesium.Math.toDegrees(cartographic.latitude);
+            const height = cartographic.height;
+
+            viewer.camera.flyTo({
+                // 相机在热气球东侧
+                destination: Cesium.Cartesian3.fromDegrees(lon + 0.005, lat, height + 100),
+                orientation: {
+                    heading: Cesium.Math.toRadians(270.0),
+                    pitch: Cesium.Math.toRadians(5.0),
+                    roll: 0.0
+                },
+                duration: 1.5,
+            });
+        }
+
+        document.querySelectorAll('input[name="location"]').forEach(radio => {
+            radio.addEventListener('change', function (e) {
+                switchLocation(e.target.value);
+            });
+        });
+
+        document.getElementById('locateBtn').addEventListener('click', locateBalloon);
+
+        switchLocation('yulong');
+    </script>
+</body>
+</html>
